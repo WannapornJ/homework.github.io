@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <title>CSS pure vs Bootstrap</title>
+</head>
+
+<body>
+    <!-- margin align grid flex -->
+    <div class="container-fluid justify-content-center align-items-center">
+        <div class="d-flex flex-row-reverse">
+            <p class="h1">Bootstrap</p>
+            <h1 class="display-4">grid and flex</h1>
+        </div>
+        <div class="row row-cols-3 justify-content-center">
+            <div class="col-2 bg-success ml-1 font-weight-bold text-center text-light">
+                <p>system</p>
+            </div>
+            <div class="col-8 bg-success ml-1 font-weight-bold text-center text-light">
+                <p>description/instruction</p>
+            </div>
+        </div>
+        <div class="row row-cols-3 justify-content-center align-items-center mt-1">
+            <div class="col-2 bg-light ml-1">
+                <p>grid</p>
+            </div>
+            <div class="col-8 bg-light ml-1">
+                <p>
+                    use class row as parent, use class col as their child.
+                </p>
+            </div>
+        </div>
+        <div class="row row-cols-3 justify-content-center align-items-center mt-1">
+            <div class="col-2 bg-light ml-1">
+                <p>flex</p>
+            </div>
+            <div class="col-8 bg-light ml-1">
+                <p>
+                    use class row as parent, use class col as their child.
+                </p>
+            </div>
+        </div>
+        <div class="row row-cols-3 justify-content-center align-items-center mt-1">
+            <div class="col-2 bg-light ml-1">
+                <p>Utilities for layout</p>
+                <ul>
+                    <li>margin</li>
+                    <li>padding</li>
+                    <li>align</li>
+                    <li>justify</li>
+                </ul>
+            </div>
+            <div class="col-8 bg-light ml-1">
+                <p>
+                    use when arrange content or items, assign in class value
+                </p>
+                <ul>
+                    <li>use m for padding and x(x axis), y(y axis), t(top), r(right), b(bottom), r(right)</li>
+                    <li>use p for padding and x(x axis), y(y axis), t(top), r(right), b(bottom), r(right)</li>
+                    <li>use in grid and flex system, In grid system use align-items and switch when use in flex system</li>
+                    <li>use in grid and flex system, In grid system use justify-content- and switch when use in flex system</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="con-lay">
+        <h1>CSS pure</h1>
+        <div class="grid-layout">
+            <div class="heading">System</div>
+            <div class="heading">Description/Instruction</div>
+            <div class="content">grid</div>
+            <div class="content">can set in style like display:grid then you can set every grid properties</div>
+            <div class="content">flex</div>
+            <div class="content">can set in style like display:flex then you can set every flex properties</div>
+            <div class="content">utilities for layout</div>
+            <div class="content">use in grid and flex system like in Bootstrap but must write in pattern property: value;
+                <ul>
+                    <li>margin
+                        <li>margin: top right bottom left;</li>
+                    </li>
+                    <li>padding
+                        <li>padding: top right bottom left;</li>
+                    </li>
+                    <li>align
+                        <li>align-items or align-content : flex-start, flex-end, center, space-...(content)</li>
+                    </li>
+                    <li>justify
+                        <li>justify-items or justify-content : flex-start, flex-end, center, space-...(content)</li>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <style>
+        .grid-layout {
+            display: grid;
+            grid-template-columns: repeat(2, auto);
+            justify-items: center;
+            align-content: center;
+        }
+        
+        .heading,
+        .content {
+            height: 100px;
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+</body>
+
+</html>
